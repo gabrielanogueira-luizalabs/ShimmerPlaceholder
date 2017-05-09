@@ -71,7 +71,7 @@ open class ShimmerPlaceholderTableViewCell: UITableViewCell {
         }
     }
     
-    open var placeholderColor: UIColor = UIColor.gray {
+    open var placeholderColor: UIColor = UIColor.lightGrayColor {
         didSet {
             imagePlaceholderLayer.backgroundColor = placeholderColor.cgColor
             linePlaceholderLayers.forEach { $0.backgroundColor = placeholderColor.cgColor }
