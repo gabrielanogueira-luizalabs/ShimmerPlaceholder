@@ -1,25 +1,24 @@
 //
-//  ShimmerPlaceholderTableViewCell.swift
+//  ShimmerCollectionViewCell.swift
 //  ml-app-ios-v2
 //
-//  Created by Gabriela Nogueira on 04/05/17.
+//  Created by Bruno Correa on 08/11/2017.
 //  Copyright © 2017 LuizaLabs. All rights reserved.
 //
 
 import UIKit
-import Shimmer
 
 
-open class ShimmerPlaceholderTableViewCell: UITableViewCell {
+public class ShimmerPlaceholderCollectionViewCell: UICollectionViewCell {
     public let placeholderView = ShimmerPlaceholderView()
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit()
     }
-
-    public override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         commonInit()
     }
     
@@ -31,9 +30,8 @@ open class ShimmerPlaceholderTableViewCell: UITableViewCell {
     fileprivate func commonInit() {
         placeholderView.contentView = self.contentView
         addSubview(placeholderView)
-
-        backgroundColor = .white
         
+        backgroundColor = .white
     }
     
     override open func prepareForReuse() {
