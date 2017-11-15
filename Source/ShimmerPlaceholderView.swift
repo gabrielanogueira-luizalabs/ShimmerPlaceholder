@@ -97,7 +97,14 @@ public class ShimmerPlaceholderView: UIView {
         let linesHeightTotal = linesTotal + spacingTotal + marginTotal
         let imageHeightTotal = marginTotal + imagePlaceholderSize.height
         
-        return (imageHeightTotal > linesHeightTotal) ? imageHeightTotal : linesHeightTotal
+        switch linesAlignment {
+        case .horizontal:
+            return (imageHeightTotal > linesHeightTotal) ? imageHeightTotal : linesHeightTotal
+            
+        case .vertical:
+            return imageHeightTotal + linesHeightTotal
+            
+        }
     }
     
     required public init?(coder aDecoder: NSCoder) {
