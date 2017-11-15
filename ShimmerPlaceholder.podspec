@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "ShimmerPlaceholder"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "Custom Shimmer Placeholder"
 
   s.description  = <<-DESC
@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.author       = { "Gabriela Nogueira" => "gabriela.nogueira@luizalabs.com" }
   s.source       = { :git => "https://github.com/gabrielanogueira-luizalabs/ShimmerPlaceholder.git", :tag => "#{s.version}" }
   s.source_files = "Source/**/*.{swift}"
-  s.platform     = :ios, "8.0"
+  s.platform     = :ios, "9.0"
   s.framework    = "UIKit"
   s.dependency 'Shimmer', '~> 1.0'
 
